@@ -2,6 +2,7 @@ package com.jcze.uxpointer;
 
 import com.jcze.uxpointer.api.DocumentResource;
 import io.dropwizard.Application;
+import io.dropwizard.java8.Java8Bundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -17,7 +18,7 @@ public class UxPointerApplication extends Application<UxPointerConfiguration> {
 
     @Override
     public void initialize(Bootstrap<UxPointerConfiguration> bootstrap) {
-        // nothing to do yet
+        bootstrap.addBundle(new Java8Bundle());
     }
 
     @Override
